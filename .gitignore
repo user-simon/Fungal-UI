@@ -1,0 +1,15 @@
+*.sln
+*.vcxproj
+*.filters
+*.user
+/.git
+/.vs
+/lib
+/lib64
+/Debug
+/Release
+/x64
+*/x64
+*/Debug
+*/Release
+*/Win32
