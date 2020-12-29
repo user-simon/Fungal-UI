@@ -78,7 +78,7 @@ void container_control::remove(control* c)
 	}
 }
 
-void container_control::remove(std::string_view name)
+void container_control::remove(std::string name)
 {
 	if (control* c; c = ui[name])
 		remove(c);

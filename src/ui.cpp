@@ -119,7 +119,7 @@ void fui_main::_draw()
 			buffer += line + std::string(width() - line.length(), ' ');
 		}
 		ASSERT(buffer.length() <= console_capacity);
-
+		
 		buffer += std::string(console_capacity - buffer.length(), ' ');
 
 		DWORD written;
@@ -167,7 +167,7 @@ void fui_main::_on_key_down(key_event& event)
 
 UINT fui_main::height()
 {
-	return m_height;
+	return m_height - (!m_status.empty() ? 1 : 0);
 }
 
 UINT fui_main::width()
@@ -203,7 +203,7 @@ void fui_main::display(control* c)
 	_draw();
 }
 
-void fui_main::display(std::string_view name)
+void fui_main::display(std::string name)
 {
 	if (control* c; c = get(name))
 		display(c);
@@ -214,6 +214,16 @@ control* fui_main::displayed_control()
 	return m_displayed;
 }
 
+std::string fui_main::status()
+{
+	return m_status;
+}
+
+void fui_main::set_status(std::string status)
+{
+	m_status = status;
+}
+
 void fui_main::remove(control* c)
 {
 	if (container_control* parent; parent = c->parent())
@@ -222,7 +232,7 @@ void fui_main::remove(control* c)
 	m_controls_lookup.erase(c->name());
 }
 
-bool fui_main::remove(std::string_view name)
+bool fui_main::remove(std::string name)
 {
 	if (control* c; c = get(name))
 	{
@@ -242,12 +252,12 @@ std::vector<control*> fui_main::controls()
 	return controls;
 }
 
-bool fui_main::control_exists(std::string_view name)
+bool fui_main::control_exists(std::string name)
 {
 	return m_controls_lookup.count(name);
 }
 
-control* fui_main::get(std::string_view name)
+control* fui_main::get(std::string name)
 {
 	if (control_exists(name))
 		return m_controls_lookup[name].get();
@@ -255,7 +265,7 @@ control* fui_main::get(std::string_view name)
 	return nullptr;
 }
 
-control* fui_main::operator[](std::string_view name)
+control* fui_main::operator[](std::string name)
 {
 	return get(name);
 }

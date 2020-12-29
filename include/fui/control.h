@@ -90,7 +90,7 @@ namespace fungal
 		/// <summary>
 		/// Gets the internal name referring to the control
 		/// </summary>
-		std::string_view name() const;
+		std::string name() const;
 
 		/// <summary>
 		/// Gets the parent of the control

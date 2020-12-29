@@ -16,7 +16,7 @@ namespace fungal
 	class fui_main
 	{
 	private:
-		std::unordered_map<std::string_view, std::unique_ptr<control>> m_controls_lookup;
+		std::unordered_map<std::string, std::unique_ptr<control>> m_controls_lookup;
 		std::vector<control*> m_displayed_path;
 
 		bool m_invalidated;
@@ -27,6 +27,8 @@ namespace fungal
 
 		void* m_screen_buffer;
 		void* m_input_stream;
+
+		std::string m_status;
 
 	private:
 		/// <summary>
@@ -98,12 +100,22 @@ namespace fungal
 		/// Set which control is displayed in the ui
 		/// </summary>
 		/// <param name="name">Name of the control</param>
-		void display(std::string_view name);
+		void display(std::string name);
 
 		/// <summary>
 		/// Gets the control currently displayed in the ui
 		/// </summary>
 		control* displayed_control();
+
+		/// <summary>
+		/// Gets the currently displayed status
+		/// </summary>
+		std::string status();
+
+		/// <summary>
+		/// Show specified string as status
+		/// </summary>
+		void set_status(std::string status);
 
 		/// <summary>
 		/// Removes control from the ui. Throws an error if the control does not exist within the ui
@@ -115,7 +127,7 @@ namespace fungal
 		/// </summary>
 		/// <param name="name">Name of the control</param>
 		/// <returns>Returns success</returns>
-		bool remove(std::string_view name);
+		bool remove(std::string name);
 
 		/// <summary>
 		/// Gets all controls in the ui
@@ -126,17 +138,17 @@ namespace fungal
 		/// Checks if control exists in ui
 		/// </summary>
 		/// <param name="name">Name of the control</param>
-		bool control_exists(std::string_view name);
+		bool control_exists(std::string name);
 
 		/// <summary>
 		/// Gets pointer to control from its name
 		/// </summary>
-		control* get(std::string_view name);
+		control* get(std::string name);
 
 		/// <summary>
 		/// Synonym of get
 		/// </summary>
-		control* operator[](std::string_view name);
+		control* operator[](std::string name);
 
 		/// <summary>
 		/// Adds control to ui.
@@ -154,7 +166,7 @@ namespace fungal
 		/// <typeparam name="control_t">Expected type of control</typeparam>
 		/// <param name="name">Name of control</param>
 		template<class CONTROL_T>
-		CONTROL_T* get_as(std::string_view name);
+		CONTROL_T* get_as(std::string name);
 
 		/// <summary>
 		/// Gets value of expected type from an input_control. 
@@ -162,19 +174,19 @@ namespace fungal
 		/// <typeparam name="value_t">Expected type of value</typeparam>
 		/// <param name="name">Name of input_control</param>
 		template<typename VALUE_T>
-		VALUE_T& get_value(std::string_view name);
+		VALUE_T get_value(std::string name);
 	};
 
 	// templated function definitions
 
 	template<class CONTROL_T>
-	CONTROL_T* fui_main::get_as(std::string_view name)
+	CONTROL_T* fui_main::get_as(std::string name)
 	{
 		return get(name)->as<CONTROL_T>();
 	}
 
 	template<typename VALUE_T>
-	VALUE_T& fui_main::get_value(std::string_view name)
+	VALUE_T fui_main::get_value(std::string name)
 	{
 		input_control<VALUE_T>* c = get_as<input_control<VALUE_T>>(name);
 		return c->value();

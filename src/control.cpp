@@ -63,7 +63,7 @@ control_body* control::body()
 	return _body.get();
 }
 
-std::string_view control::name() const
+std::string control::name() const
 {
 	return m_name;
 }

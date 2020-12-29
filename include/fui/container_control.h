@@ -31,7 +31,7 @@ namespace fungal
 		/// Removes control from container. Does not remove control from fui_main
 		/// </summary>
 		/// <param name="name">Name of the control</param>
-		void remove(std::string_view name);
+		void remove(std::string name);
 
 		/// <summary>
 		/// Gets currently selected control

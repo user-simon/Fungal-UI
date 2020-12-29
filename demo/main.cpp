@@ -1,47 +1,43 @@
 #include <fui/fui.h>
+#include <Windows.h>
 using namespace fungal;
 
-void on_login(control* c)
+void on_login(control*)
 {
-	ui.display("standard_controls");
-}
+	// retrieve values from textfields
 
-void asdf(control*, BUTTON_TYPE)
-{
-	ui.display("new_page");
+	std::string username = ui.get_value<std::string>("text_username");
+	std::string password = ui.get_value<std::string>("text_password");
+
+	// very secure credentials check
+	if (username == "admin" && password == "password1")
+		ui.display("second_page");
 }
 
 int main()
 {
+	// initializes variables and the console environment
 	ui.init();
-	
+
+	// create and add controls in the login page
 	page* login_page = new page("login_page", "Login");
 	{
-		login_page->add(new textfield("username", "Username"));
-		login_page->add(new textfield("password", "Password", "", true));
-		login_page->add(new button("button_login", "Login", on_login));
+		*login_page << new textfield("text_username", "Username");
+		*login_page << new textfield("text_password", "Password", "", true);
+		*login_page << new button("button_confirm_login", "Login", on_login);
 
-		ui.add(login_page);
+		ui << login_page;
 	}
 
-	// alternative syntax for creating controls through overloaded operator<<
-
-	page* standard_controls = new page("standard_controls", "Standard page");
+	// create and add second page
+	page* second_page = new page("second_page", "This is a second page");
 	{
-		*standard_controls << new buttonbox("buttonbox", "Buttonbox", BUTTON_OK | BUTTON_CANCEL | BUTTON_RETRY, asdf);
-		*standard_controls << new checkbox("checkbox", "Checkbox");
-		*standard_controls << new multiselect("multiselect", "Multiselect", { "Option 1", "Option 2", "Option 3" });
-		*standard_controls << new numselect("numselect", "Numselect", 0, 100);
-		*standard_controls << new multiselect("multiselect2", "Multiselect 2", { "Option 1", "Option 2", "Option 3" });
-		*standard_controls << new radioselect("radioselect", "Radioselect", { "Option 1", "Option 2", "Option 3" });
-		*standard_controls << new multiselect("multiselect3", "Multiselect 3", { "Option 1", "Option 2", "Option 3" });
-		*standard_controls << new checkbox("checkbox2", "Checkbox 2");
-
-		ui << standard_controls;
+		ui << second_page;
 	}
-	
-	ui << new page("new_page", "Page test");
 
+	// set displayed control
 	ui.display(login_page);
+
+	// starts drawing and listening for events
 	ui.exec();
 }
