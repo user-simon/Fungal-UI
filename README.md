@@ -22,7 +22,7 @@ Nothing fancy, but one could reasonably extend the project to handle both mouse 
 
 ## Building
 
-The project uses C++17 and has no external dependencies.
+The project uses C++17 and has no external dependencies. At the moment it is only available for Windows but there are only a few functions in [ui.cpp](https://github.com/userexit/Fungal-UI/blob/main/src/ui.cpp) that depend on Windows that could with some _minor_ trouble be rewritten to work with Linux but I can't be arsed looking into the Linux API so.
 
 ## Known issues
 
