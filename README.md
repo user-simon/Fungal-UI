@@ -2,7 +2,7 @@
 ### A lightweight UI framework for console-based applications
 
 <p align="center">
-<img src="https://i.imgur.com/Yn5I2VQ.gif" width="75%">
+<img src="https://i.imgur.com/So3aaF3.gif" width="75%">
 </p>
 
 ## About
