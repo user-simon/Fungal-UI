@@ -1,6 +1,10 @@
 # Fungal UI
 ### A lightweight UI framework for console-based applications
 
+<p align="center">
+<img src="https://i.imgur.com/CU2n2Ll.png" width="75%">
+</p>
+
 ## About
 
 Fungal UI is a simple library, made mostly for fun, to create UIs in console-based C++ applications.
