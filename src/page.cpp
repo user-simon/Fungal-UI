@@ -106,8 +106,8 @@ void page::_on_key_down(key_event& event)
 	if (m_controls.empty())
 		return;
 	
-	bool up   = event.code == VK_UP   || event.code == VK_TAB && event.control & SHIFT_PRESSED;
-	bool down = event.code == VK_DOWN || event.code == VK_TAB;
+	bool up   = event.code == VK_UP   || event.code == VK_TAB &&   event.control & SHIFT_PRESSED;
+	bool down = event.code == VK_DOWN || event.code == VK_TAB && !(event.control & SHIFT_PRESSED);
 	
 	if (up || down)
 	{

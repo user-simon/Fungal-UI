@@ -1,5 +1,4 @@
 #include <fui/fui.h>
-#include <Windows.h>
 using namespace fungal;
 
 void on_login(control*)
@@ -32,6 +31,8 @@ int main()
 	// create and add second page
 	page* second_page = new page("second_page", "This is a second page");
 	{
+		*second_page << new multiselect("multiselect", "Multiselect", { "Option 1", "Option 2", "Option 3" });
+		*second_page << new multiselect("multiselect2", "Multiselect2", { "Option 1", "Option 2", "Option 3" });
 		ui << second_page;
 	}
 

@@ -104,7 +104,7 @@ void control::set_data(std::any get_data)
 bool control::is_selected(bool cascade) const
 {
 	if (!_parent)
-		return true;
+		return is_displayed();
 	
 	if (this != _parent->selected_control())
 		return false;

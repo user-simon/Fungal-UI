@@ -29,7 +29,7 @@ void textfield::_update_body()
 
 bool textfield::_handle_input(key_event& event)
 {
-	if (isprint(event.ascii))
+	if (iswprint(event.ascii))
 	{
 		m_caret = ++m_value.insert(m_caret, event.ascii);
 		return true;
@@ -96,7 +96,7 @@ std::string::iterator textfield::_find_jump_point(const bool right)
 			const char current = *it;
 			const char left = *(it - 1);
 			
-			if (ispunct(current) && !ispunct(left) || isalnum(current) && !isalnum(left))
+			if (iswpunct(current) && !iswpunct(left) || iswalnum(current) && !iswalnum(left))
 				return it;
 		}
 	}

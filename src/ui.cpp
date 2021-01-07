@@ -79,7 +79,7 @@ void fui_main::_read_console_input()
 			key_event event = 
 			{
 				event_record.wVirtualKeyCode,
-				event_record.uChar.AsciiChar,
+				event_record.uChar.UnicodeChar,
 				event_record.dwControlKeyState
 			};
 
