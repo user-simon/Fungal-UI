@@ -9,9 +9,9 @@ Much like VIM, you can launch a Fungal UI program from the terminal and return t
 
 Navigation between controls is performed with the **Arrow up-down keys** and the **Tab key**, navigation within a control is performed with the **Arrow left-right keys**, and controls are drawn vertically, in a list-like fashion.
 
-Nothing fancy, but one could reasonbly extend the project to handle both mouse events and 2D control positioning -- the reason I haven't is that that seemed outside the scope of the simple UI library I wanted to make but I might revisit it at a later date to build upon it further.
-
 **Escape** allows you to go back to whichever control was displayed previously and if there are none, the program exits.
+
+Nothing fancy, but one could reasonably extend the project to handle both mouse events and 2D control positioning -- the reason I haven't is that such features seemed outside the scope of the simple UI library I wanted to make but I might revisit at a later date and build upon it further.
 
 ## Wiki
 * [Getting started](https://github.com/userexit/Fungal-UI/wiki)
