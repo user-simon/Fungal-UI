@@ -39,3 +39,6 @@ The project uses C++17 and has no external dependencies. At the moment it is onl
 <p align="center">
 <img src="https://i.imgur.com/jQYTTnb.gif" width="75%">
 </p>
+
+## Credit
+CMake files generated from a Visual Studio project with [pavelliavonau/cmakeconverter](https://github.com/pavelliavonau/cmakeconverter).
