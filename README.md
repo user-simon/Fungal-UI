@@ -1,6 +1,10 @@
 # Fungal UI
 ### A lightweight UI framework for console-based applications
 
+<p align="center">
+<img src="https://i.imgur.com/So3aaF3.gif" width="75%">
+</p>
+
 ## About
 
 Fungal UI is a simple library, made mostly for fun, to create UIs in console-based C++ applications.
@@ -9,9 +13,9 @@ Much like VIM, you can launch a Fungal UI program from the terminal and return t
 
 Navigation between controls is performed with the **Arrow up-down keys** and the **Tab key**, navigation within a control is performed with the **Arrow left-right keys**, and controls are drawn vertically, in a list-like fashion.
 
-Nothing fancy, but one could reasonbly extend the project to handle both mouse events and 2D control positioning -- the reason I haven't is that that seemed outside the scope of the simple UI library I wanted to make but I might revisit it at a later date to build upon it further.
-
 **Escape** allows you to go back to whichever control was displayed previously and if there are none, the program exits.
+
+Nothing fancy, but one could reasonably extend the project to handle both mouse events and 2D control positioning -- the reason I haven't is that such features seemed outside the scope of the simple UI library I wanted to make but I might revisit at a later date and build upon it further.
 
 ## Wiki
 * [Getting started](https://github.com/userexit/Fungal-UI/wiki)
@@ -22,7 +26,7 @@ Nothing fancy, but one could reasonbly extend the project to handle both mouse e
 
 ## Building
 
-The project uses C++17 and has no external dependencies.
+The project uses C++17 and has no external dependencies. At the moment it is only available for Windows but there are only a few functions in [ui.cpp](https://github.com/userexit/Fungal-UI/blob/main/src/ui.cpp) that depend on Windows that could with some _minor_ trouble be rewritten to work with Linux but I can't be arsed looking into the Linux API so.
 
 ## Known issues
 
