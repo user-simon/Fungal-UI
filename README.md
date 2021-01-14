@@ -24,9 +24,12 @@ Nothing fancy, but one could reasonably extend the project to handle both mouse 
 * [Internal structure](https://github.com/userexit/Fungal-UI/wiki/Internal-structure)
 * [Creating custom controls](https://github.com/userexit/Fungal-UI/wiki/Creating-custom-controls)
 
+## Compatability
+This library is compatible with windows projects using C++17 and above. Since there are only a few functions which are Windows-dependant, one could with some _minor_ trouble generalize it to work for Linux as well.
+
 ## Building
 
-The project uses C++17 and has no external dependencies. At the moment it is only available for Windows but there are only a few functions in [ui.cpp](https://github.com/userexit/Fungal-UI/blob/main/src/ui.cpp) that depend on Windows that could with some _minor_ trouble be rewritten to work with Linux but I can't be arsed looking into the Linux API so.
+Use the included CMake files and build as normal.
 
 ## Known issues
 
