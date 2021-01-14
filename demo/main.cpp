@@ -33,6 +33,7 @@ int main()
 	{
 		*second_page << new multiselect("multiselect", "Multiselect", { "Option 1", "Option 2", "Option 3" });
 		*second_page << new multiselect("multiselect2", "Multiselect2", { "Option 1", "Option 2", "Option 3" });
+
 		ui << second_page;
 	}
 
