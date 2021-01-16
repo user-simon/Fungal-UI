@@ -25,11 +25,11 @@ Navigation between controls is performed with the **Arrow up-down keys** and the
 This library is compatible with windows projects using C++17 and above. Since there are only a few functions which are Windows-dependant, one could with some _minor_ trouble generalize it to work for Linux as well.
 
 ## :closed_book: Wiki
-* :pushpin: [Getting started](https://github.com/userexit/Fungal-UI/wiki)
-* :pushpin: [Basic usage](https://github.com/userexit/Fungal-UI/wiki/Basic-usage)
-* :pushpin: [Standard controls](https://github.com/userexit/Fungal-UI/wiki/Standard-controls)
-* :pushpin: [Internal structure](https://github.com/userexit/Fungal-UI/wiki/Internal-structure)
-* :pushpin: [Creating custom controls](https://github.com/userexit/Fungal-UI/wiki/Creating-custom-controls)
+* [Getting started](https://github.com/userexit/Fungal-UI/wiki)
+* [Basic usage](https://github.com/userexit/Fungal-UI/wiki/Basic-usage)
+* [Standard controls](https://github.com/userexit/Fungal-UI/wiki/Standard-controls)
+* [Internal structure](https://github.com/userexit/Fungal-UI/wiki/Internal-structure)
+* [Creating custom controls](https://github.com/userexit/Fungal-UI/wiki/Creating-custom-controls)
 
 ## :test_tube: Building
 
