@@ -1,11 +1,13 @@
-# Fungal UI
-### A lightweight UI framework for console-based applications
+# :mushroom: Fungal UI
+### A simple terminal UI framework
 
 <p align="center">
 <img src="https://i.imgur.com/So3aaF3.gif" width="75%">
 </p>
 
-## About
+---
+
+## :grey_question: About
 
 Fungal UI is a simple library, made mostly for fun, to create UIs in console-based C++ applications.
 
@@ -17,31 +19,31 @@ Navigation between controls is performed with the **Arrow up-down keys** and the
 
 Nothing fancy, but one could reasonably extend the project to handle both mouse events and 2D control positioning -- the reason I haven't is that such features seemed outside the scope of the simple UI library I wanted to make but I might revisit at a later date and build upon it further.
 
-## Wiki
-* [Getting started](https://github.com/userexit/Fungal-UI/wiki)
-* [Basic usage](https://github.com/userexit/Fungal-UI/wiki/Basic-usage)
-* [Standard controls](https://github.com/userexit/Fungal-UI/wiki/Standard-controls)
-* [Internal structure](https://github.com/userexit/Fungal-UI/wiki/Internal-structure)
-* [Creating custom controls](https://github.com/userexit/Fungal-UI/wiki/Creating-custom-controls)
+## :closed_book: Wiki
+* :pushpin: [Getting started](https://github.com/userexit/Fungal-UI/wiki)
+* :pushpin: [Basic usage](https://github.com/userexit/Fungal-UI/wiki/Basic-usage)
+* :pushpin: [Standard controls](https://github.com/userexit/Fungal-UI/wiki/Standard-controls)
+* :pushpin: [Internal structure](https://github.com/userexit/Fungal-UI/wiki/Internal-structure)
+* :pushpin: [Creating custom controls](https://github.com/userexit/Fungal-UI/wiki/Creating-custom-controls)
 
 ## Compatability
 This library is compatible with windows projects using C++17 and above. Since there are only a few functions which are Windows-dependant, one could with some _minor_ trouble generalize it to work for Linux as well.
 
-## Building
+## :test_tube: Building
 
 Use the included CMake files and build as normal.
 
-## Known issues
+## :x: Known issues
 
 * [ ] Resizing the Window causes all kinds of issues
 * [ ] If a non-page control is taller than the console-window, it would go out of bounds. Should attempt to generalize the scrolling implementation in [page.cpp](https://github.com/userexit/Fungal-UI/blob/main/src/page.cpp)
 
 
-## Example
+## :toolbox: Example
 
 <p align="center">
 <img src="https://i.imgur.com/jQYTTnb.gif" width="75%">
 </p>
 
-## Credit
+## :trophy: Credit
 CMake files generated from a Visual Studio project with [pavelliavonau/cmakeconverter](https://github.com/pavelliavonau/cmakeconverter).
