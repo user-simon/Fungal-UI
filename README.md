@@ -2,7 +2,7 @@
 ### A simple terminal UI framework
 
 <p align="center">
-<img src="https://i.imgur.com/So3aaF3.gif" width="75%">
+<img src="https://i.imgur.com/tjYdO3v.gif" width="75%">
 </p>
 
 ---
@@ -22,7 +22,7 @@ Navigation between controls is performed with the **Arrow up-down keys** and the
 **Escape** allows you to go back to whichever control was displayed previously and if there are none, the program exits.
 
 ### Compatability
-This library is compatible with windows projects using C++17 and above. Since there are only a few functions which are Windows-dependant, one could with some _minor_ trouble generalize it to work for Linux as well.
+This library is compatible with projects running on Windows and using C++17 or above. Since there are only a few functions which are Windows-dependant, one could with some _minor_ trouble generalize it to work for Linux as well.
 
 ## :closed_book: Wiki
 * [Getting started](https://github.com/userexit/Fungal-UI/wiki)
