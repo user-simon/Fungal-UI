@@ -13,11 +13,16 @@ Fungal UI is a simple library, made mostly for fun, to create UIs in console-bas
 
 Much like VIM, you can launch a Fungal UI program from the terminal and return to the original console buffer after exiting.
 
+Nothing fancy, but one could reasonably extend the project to handle both mouse events and 2D control positioning -- the reason I haven't is that such features seemed outside the scope of the simple UI library I wanted to make but I might revisit at a later date and build upon it further.
+
+### Key bindings
+
 Navigation between controls is performed with the **Arrow up-down keys** and the **Tab key**, navigation within a control is performed with the **Arrow left-right keys**, and controls are drawn vertically, in a list-like fashion.
 
 **Escape** allows you to go back to whichever control was displayed previously and if there are none, the program exits.
 
-Nothing fancy, but one could reasonably extend the project to handle both mouse events and 2D control positioning -- the reason I haven't is that such features seemed outside the scope of the simple UI library I wanted to make but I might revisit at a later date and build upon it further.
+### Compatability
+This library is compatible with windows projects using C++17 and above. Since there are only a few functions which are Windows-dependant, one could with some _minor_ trouble generalize it to work for Linux as well.
 
 ## :closed_book: Wiki
 * :pushpin: [Getting started](https://github.com/userexit/Fungal-UI/wiki)
@@ -25,9 +30,6 @@ Nothing fancy, but one could reasonably extend the project to handle both mouse 
 * :pushpin: [Standard controls](https://github.com/userexit/Fungal-UI/wiki/Standard-controls)
 * :pushpin: [Internal structure](https://github.com/userexit/Fungal-UI/wiki/Internal-structure)
 * :pushpin: [Creating custom controls](https://github.com/userexit/Fungal-UI/wiki/Creating-custom-controls)
-
-## Compatability
-This library is compatible with windows projects using C++17 and above. Since there are only a few functions which are Windows-dependant, one could with some _minor_ trouble generalize it to work for Linux as well.
 
 ## :test_tube: Building
 
