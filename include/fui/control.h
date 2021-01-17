@@ -60,7 +60,7 @@ namespace fungal
 
 	public:
 		virtual ~control() = default;
-		
+
 		/// <summary>
 		/// Defines generic actions to be taken upon a key-press
 		/// </summary>

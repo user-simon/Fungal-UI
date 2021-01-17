@@ -117,7 +117,7 @@ void control_body::append(std::string string)
 	if (m_content.empty())
 		add(string);
 	else
-		*(m_content.end() - 1) += string;
+		m_content.back() += string;
 }
 
 void control_body::append(control_body* body)

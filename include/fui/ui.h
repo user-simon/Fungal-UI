@@ -1,5 +1,5 @@
 #pragma once
-#include <vector>
+#include <forward_list>
 #include <unordered_map>
 #include <memory>
 
@@ -17,7 +17,7 @@ namespace fungal
 	{
 	private:
 		std::unordered_map<std::string, std::unique_ptr<control>> m_controls_lookup;
-		std::vector<control*> m_displayed_path;
+		std::forward_list<control*> m_displayed_history;
 
 		bool m_invalidated;
 		bool m_running;

@@ -153,7 +153,7 @@ void fui_main::_on_key_down(key_event& event)
 	{
 	case VK_ESCAPE:
 	{
-		if (m_displayed_path.size() <= 1)
+		if (m_displayed_history.empty())
 			exit();
 		else
 			display_previous();
@@ -188,18 +188,22 @@ void fui_main::stop()
 
 void fui_main::display_previous()
 {
-	if (m_displayed_path.size() > 1)
+	if (!m_displayed_history.empty())
 	{
-		m_displayed_path.pop_back();
-		m_displayed = *(m_displayed_path.end() - 1);
+		m_displayed = m_displayed_history.front();
+		m_displayed_history.pop_front();
 		_draw();
 	}
 }
 
 void fui_main::display(control* c)
 {
+	// add currently displayed control to history
+	if (m_displayed)
+		m_displayed_history.push_front(m_displayed);
+
+	// set new displayed control and redraw
 	m_displayed = c;
-	m_displayed_path.push_back(c);
 	_draw();
 }
 

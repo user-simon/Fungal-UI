@@ -119,7 +119,7 @@ control* container_control::first_control() const
 control* container_control::last_control() const
 {
 	if (!m_controls.empty())
-		return *(m_controls.end() - 1);
+		return m_controls.back();
 
 	return nullptr;
 }
