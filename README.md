@@ -5,6 +5,8 @@
 <img src="https://i.imgur.com/tjYdO3v.gif" width="75%">
 </p>
 
+Disclaimer: this was written a long time ago and I've come a long way as a programmer. I have no reason to believe that this library wouldn't function as promised, but I don't entirely stand for all of the code style and practises found within.
+
 ---
 
 ## :grey_question: About
